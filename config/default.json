@@ -1,0 +1,3 @@
+{
+    "mongoURI": "mongodb+srv://dbManager:internship@socialservice-ljnop.mongodb.net/test?retryWrites=true&w=majority"
+}
