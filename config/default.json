@@ -1,3 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://dbManager:internship@socialservice-ljnop.mongodb.net/test?retryWrites=true&w=majority"
+    "mongoURI": "mongodb+srv://dbManager:internship@socialservice-ljnop.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "secretwebtoken"
 }
