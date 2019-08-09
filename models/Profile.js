@@ -14,7 +14,7 @@ const ProfileSchema = new mongoose.Schema({
     location: {
         type: String
     },
-    satus: {
+    status: {
         type: [String],
         required: true
     },
