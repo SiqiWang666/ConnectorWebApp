@@ -10,7 +10,8 @@ const User = require('../../models/User');
 // @route     POST api/users
 // @desc      Register Users
 // @access    Public
-router.post('/', [
+router.post('/',
+[
     check('name', 'Name is required').not().isEmpty(),
     check('email', 'Please enter a valid email').isEmail(),
     check('password', 'Please enter a password with 8 or more characters').isLength({ min: 8 })
