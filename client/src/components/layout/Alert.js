@@ -11,7 +11,7 @@ Alert.propTypes = {
     alerts: PropTypes.array.isRequired
 }
 
-//Map state to props of this component
+//Map state to props of this component.
 const mapStateToProps = (state) => ({
     alerts: state.alert
 });
