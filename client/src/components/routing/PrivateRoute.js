@@ -12,8 +12,8 @@ PrivateRoute.propTypes = {
 };
 
 //Pull out state in the auth reducer.
-const mapStateToProps = state => {{
+const mapStateToProps = state => ({
     auth: state.auth
-}};
+});
 
 export default connect(mapStateToProps)(PrivateRoute);
