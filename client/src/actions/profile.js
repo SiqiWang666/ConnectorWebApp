@@ -62,3 +62,83 @@ export const createProfile = (formData, history, edit = false) => async dispatch
         });
     }
 }
+
+/**
+ * Add or update experience
+ * @param formData - the data in the submitted form
+ * @param history - the history object which is used to redirect
+ */
+export const addExperience = (formData, history) => async dispatch => {
+    try {
+        const config = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }
+
+        const res = await axios.put('/api/profile/experience', formData, config);
+
+        dispatch({
+            type: UPDATE_PROFILE,
+            payload: res.data
+        });
+
+        dispatch(setAlert('Experience Added', 'success'));
+
+        // Redirect to dashboard
+        history.push('/dashboard');
+    } catch(err) {
+        const errors = err.response.data.errors;
+        if(errors) {
+            errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
+        }
+
+        dispatch({
+            type: PROFILE_ERROR,
+            payload: {
+                msg: err.response.statusText,
+                status: err.response.status
+            }
+        });
+    }
+}
+
+/**
+ * Add or update education
+ * @param formData - the data in the submitted form
+ * @param history - the history object which is used to redirect
+ */
+export const addEducation = (formData, history) => async dispatch => {
+    try {
+        const config = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }
+
+        const res = await axios.put('/api/profile/education', formData, config);
+
+        dispatch({
+            type: UPDATE_PROFILE,
+            payload: res.data
+        });
+
+        dispatch(setAlert('Education Added', 'success'));
+
+        // Redirect to dashboard
+        history.push('/dashboard');
+    } catch(err) {
+        const errors = err.response.data.errors;
+        if(errors) {
+            errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
+        }
+
+        dispatch({
+            type: PROFILE_ERROR,
+            payload: {
+                msg: err.response.statusText,
+                status: err.response.status
+            }
+        });
+    }
+}
