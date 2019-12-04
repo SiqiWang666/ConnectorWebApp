@@ -9,7 +9,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
     // Get profiles, run once.
     useEffect(() => {
         getProfiles();
-    }, []);
+    }, [getProfiles]);
 
     return (
         <Fragment>
