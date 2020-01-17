@@ -1,0 +1,1 @@
+This is a website using MERN stack for software developers to connect with each other.
