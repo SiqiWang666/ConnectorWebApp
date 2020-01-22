@@ -1,3 +1,4 @@
 #Ignore node modul dependencies.
 node_modules/
 .DS_Store
+config/default.json
