@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://dbManager:internship@socialservice-ljnop.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "secretwebtoken",
+    "githubClientId": "b64be5caceafcd0ebf77",
+    "githubSecret": "e7d7a7d8b4873031c896d165bac7b9893206c11c"
+}
