@@ -5,7 +5,7 @@ This is a [social website](https://tranquil-oasis-78458.herokuapp.com/) for soft
     ├── client                    # Source files of React front-end
     ├── config                    # Config files
     ├── middleware                # Middle authentication
-    ├── models                    # NoSQL schemas
+    ├── models                    # Define data models
     ├── routes/api                # Source files of Express back-end
     ├── package.json              # Dependencies for project
     ├── package-lock.json
